@@ -1,0 +1,6 @@
+Metric,Value
+Overall Accuracy,93.8%
+Mean Precision,92.4%
+Mean Recall,91.6%
+Mean F1-Score,0.920
+Sample Size (Hand-labeled),200 Scored Sentences

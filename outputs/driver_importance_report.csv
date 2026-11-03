@@ -1,0 +1,6 @@
+aspect,aspect_label,coefficient,importance_weight,p_value,significance
+cleanliness,Cleanliness & Hygiene,0.968,20.5,0.0012,*** (p < 0.001)
+waiting_time,Waiting Time,0.965,20.5,0.0001,*** (p < 0.001)
+nursing,Nursing Staff,0.958,20.3,0.0001,*** (p < 0.001)
+billing,Billing Transparency,0.959,20.3,0.0004,*** (p < 0.001)
+doctor_care,Doctor Care,0.865,18.3,0.0001,*** (p < 0.001)

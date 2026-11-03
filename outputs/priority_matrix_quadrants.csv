@@ -1,0 +1,6 @@
+aspect,total_mentions,avg_sentiment_score,overall_pct_pos,overall_pct_neg,net_sentiment,aspect_label,importance_weight,coefficient,quadrant,action_recommendation,zone_color
+billing,1159.0,-0.085,43.2,56.8,-13.6,Billing Transparency,20.3,0.959,Fix First (Critical Target),Immediate executive intervention required. High driver of patient churn with low satisfaction.,#FB7185
+cleanliness,1181.0,0.159,63.5,36.5,27.0,Cleanliness & Hygiene,20.5,0.968,Maintain Excellence (Key Strength),Core institutional strength. Protect resources and reinforce clinical excellence.,#34D399
+doctor_care,1232.0,0.151,62.4,37.6,24.8,Doctor Care,18.3,0.865,Maintain Standard (Low Leverage),Stable baseline. Do not over-allocate capital or operational focus.,#64748B
+nursing,1215.0,0.151,62.9,37.1,25.8,Nursing Staff,20.3,0.958,Maintain Excellence (Key Strength),Core institutional strength. Protect resources and reinforce clinical excellence.,#34D399
+waiting_time,1196.0,0.071,55.8,44.2,11.6,Waiting Time,20.5,0.965,Maintain Excellence (Key Strength),Core institutional strength. Protect resources and reinforce clinical excellence.,#34D399

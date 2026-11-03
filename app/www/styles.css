@@ -1,0 +1,447 @@
+/* ==============================================================================
+   HEALYTICS: Obsidian & Gold (Executive Suite) Design System
+   High-End Healthcare Intelligence Terminal
+   ============================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Color Tokens */
+  --bg-canvas: #0A0A0A;
+  --bg-surface: #161616;
+  --bg-surface-elevated: #1F1F1F;
+  --border-gold-subtle: rgba(212, 175, 55, 0.20);
+  --border-gold-strong: rgba(212, 175, 55, 0.45);
+  
+  --accent-gold: #E6C594;
+  --accent-gold-hover: #F3DEBE;
+  --accent-gold-glow: rgba(230, 197, 148, 0.30);
+  --accent-gold-dim: rgba(230, 197, 148, 0.12);
+  
+  --success-gem: #059669;
+  --success-gem-bg: rgba(5, 150, 105, 0.15);
+  --success-gem-glow: rgba(5, 150, 105, 0.35);
+  
+  --alert-burgundy: #9F1239;
+  --alert-burgundy-bg: rgba(159, 18, 57, 0.20);
+  --alert-burgundy-glow: rgba(159, 18, 57, 0.45);
+  
+  --neutral-charcoal: #2A2A2A;
+  --neutral-slate: #64748B;
+  
+  --text-header: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-mono: #CBD5E1;
+  --text-gold: #E6C594;
+  
+  --card-radius: 8px;
+  --shadow-terminal: 0 4px 24px -2px rgba(0, 0, 0, 0.7);
+  --shadow-burgundy-pulse: 0 0 25px rgba(159, 18, 57, 0.35);
+  --shadow-gem-pulse: 0 0 25px rgba(5, 150, 105, 0.25);
+}
+
+/* Global Reset & Base Canvas */
+body, .bslib-page-dashboard, html {
+  background-color: var(--bg-canvas) !important;
+  color: var(--text-header) !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, .brand-title, .card-title, .sidebar-title, .nav-tabs .nav-link {
+  font-family: 'Cinzel', serif !important;
+  letter-spacing: 0.10em !important;
+  text-transform: uppercase !important;
+}
+
+.kpi-num, .terminal-mono, .mono-data {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+
+/* Header Bar */
+.header-bar, .navbar {
+  background-color: var(--bg-surface) !important;
+  border-bottom: 1px solid var(--border-gold-subtle) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8) !important;
+  padding: 0.85rem 2rem !important;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand-title {
+  color: var(--text-header) !important;
+  font-weight: 800 !important;
+  font-size: 1.35rem !important;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand-badge {
+  background: linear-gradient(135deg, #B48E43, #E6C594) !important;
+  color: #0A0A0A !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 800 !important;
+  font-size: 0.72rem !important;
+  padding: 0.25rem 0.65rem !important;
+  border-radius: 4px !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.quote-ribbon {
+  background: linear-gradient(90deg, rgba(22, 22, 22, 0.95), rgba(31, 31, 31, 0.95));
+  border-bottom: 1px solid var(--border-gold-subtle);
+  color: var(--accent-gold);
+  font-size: 0.78rem;
+  font-style: italic;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.06em;
+  padding: 0.4rem 2rem;
+  text-align: center;
+}
+
+/* Sidebar Terminal Panel */
+.sidebar-panel, .bslib-sidebar-layout > .sidebar, .sidebar {
+  background-color: var(--bg-surface) !important;
+  border-right: 1px solid var(--border-gold-subtle) !important;
+  padding: 1.5rem !important;
+}
+
+.sidebar-title {
+  color: var(--accent-gold) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 1.4rem !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-label {
+  color: var(--text-secondary) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 0.35rem;
+}
+
+.form-select, .form-control, .selectize-input {
+  background-color: var(--bg-canvas) !important;
+  border: 1px solid var(--border-gold-subtle) !important;
+  color: var(--text-header) !important;
+  border-radius: 6px !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.85rem !important;
+  padding: 0.55rem 0.75rem !important;
+  margin-bottom: 1.1rem;
+  transition: all 0.25s ease !important;
+}
+
+.form-select:focus, .form-control:focus, .selectize-input.focus {
+  border-color: var(--accent-gold) !important;
+  box-shadow: 0 0 12px var(--accent-gold-glow) !important;
+}
+
+/* Asymmetric Bento Grid & Blueprint Corner Crosshairs */
+.bento-card {
+  background-color: var(--bg-surface) !important;
+  border: 1px solid var(--border-gold-subtle) !important;
+  border-radius: var(--card-radius) !important;
+  box-shadow: var(--shadow-terminal) !important;
+  padding: 1.35rem !important;
+  margin-bottom: 1.35rem !important;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.bento-card:hover {
+  border-color: var(--border-gold-strong) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.85), 0 0 15px rgba(212, 175, 55, 0.15) !important;
+}
+
+/* Blueprint Architectural Corner Crosshairs */
+.bento-card::before, .bento-card::after {
+  content: "+";
+  position: absolute;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  opacity: 0.6;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.bento-card::before {
+  top: 6px;
+  left: 8px;
+}
+
+.bento-card::after {
+  bottom: 6px;
+  right: 8px;
+}
+
+/* Ambient Velvet Glow States */
+.bento-card.card-alert-glow {
+  box-shadow: var(--shadow-terminal), var(--shadow-burgundy-pulse) !important;
+  border-color: var(--alert-burgundy) !important;
+}
+
+.bento-card.card-gem-glow {
+  box-shadow: var(--shadow-terminal), var(--shadow-gem-pulse) !important;
+  border-color: var(--success-gem) !important;
+}
+
+.card-title {
+  color: var(--text-secondary) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.9rem !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+  padding-bottom: 0.45rem;
+}
+
+/* KPI Numbers & Terminal Figures */
+.kpi-num {
+  font-size: 2.35rem !important;
+  font-weight: 800 !important;
+  color: var(--text-header) !important;
+  line-height: 1.05;
+  margin: 0.3rem 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.kpi-sub {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Badges & Pills */
+.badge-pill {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 700 !important;
+  font-size: 0.72rem !important;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
+.badge-pos {
+  background: var(--success-gem-bg) !important;
+  color: var(--success-gem) !important;
+  border: 1px solid rgba(5, 150, 105, 0.35) !important;
+}
+
+.badge-neg {
+  background: var(--alert-burgundy-bg) !important;
+  color: #FDA4AF !important;
+  border: 1px solid var(--alert-burgundy) !important;
+}
+
+.badge-gold {
+  background: var(--accent-gold-dim) !important;
+  color: var(--accent-gold) !important;
+  border: 1px solid var(--border-gold-subtle) !important;
+}
+
+.badge-neu {
+  background: rgba(100, 116, 139, 0.15) !important;
+  color: var(--neutral-slate) !important;
+  border: 1px solid rgba(100, 116, 139, 0.3) !important;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+  border-bottom: 1px solid var(--border-gold-subtle) !important;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.nav-tabs .nav-link {
+  color: var(--text-secondary) !important;
+  border: 1px solid transparent !important;
+  border-radius: 6px 6px 0 0 !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  padding: 0.65rem 1.25rem !important;
+  transition: all 0.25s ease !important;
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--accent-gold) !important;
+  background: var(--accent-gold-dim) !important;
+  border-color: transparent !important;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--accent-gold) !important;
+  background: var(--bg-surface) !important;
+  border: 1px solid var(--border-gold-subtle) !important;
+  border-bottom-color: var(--bg-surface) !important;
+  box-shadow: inset 0 2px 0 0 var(--accent-gold), 0 -4px 15px rgba(212, 175, 55, 0.12) !important;
+}
+
+/* Executive Buttons */
+.btn-action, .btn-primary {
+  background-color: var(--accent-gold) !important;
+  border: 1px solid var(--accent-gold) !important;
+  color: #0A0A0A !important;
+  font-family: 'Cinzel', serif !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  border-radius: 6px !important;
+  padding: 0.55rem 1.35rem !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 2px 12px var(--accent-gold-glow) !important;
+}
+
+.btn-action:hover, .btn-primary:hover {
+  background-color: var(--accent-gold-hover) !important;
+  border-color: var(--accent-gold-hover) !important;
+  box-shadow: 0 0 20px rgba(230, 197, 148, 0.55) !important;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent !important;
+  border: 1px solid var(--border-gold-subtle) !important;
+  color: var(--accent-gold) !important;
+  font-family: 'Cinzel', serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  border-radius: 6px !important;
+  padding: 0.5rem 1.1rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-outline:hover {
+  background: var(--accent-gold-dim) !important;
+  border-color: var(--accent-gold) !important;
+  color: #FFF !important;
+}
+
+/* Priority Matrix Velvet Burgundy "Fix First" Zone */
+.zone-alert-box {
+  background: linear-gradient(135deg, rgba(159, 18, 57, 0.25), rgba(22, 22, 22, 0.8)) !important;
+  border-left: 4px solid var(--alert-burgundy) !important;
+  border-top: 1px solid rgba(159, 18, 57, 0.4) !important;
+  border-right: 1px solid rgba(159, 18, 57, 0.2) !important;
+  border-bottom: 1px solid rgba(159, 18, 57, 0.2) !important;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.insight-bullet {
+  background: rgba(26, 26, 26, 0.7);
+  border: 1px solid var(--border-gold-subtle);
+  border-left: 3px solid var(--accent-gold);
+  border-radius: 6px;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.insight-bullet strong {
+  color: var(--accent-gold);
+}
+
+/* Live Review Analyzer ("X-Ray Lens") */
+.xray-container {
+  background-color: var(--bg-canvas);
+  border: 1px solid var(--border-gold-subtle);
+  border-radius: 8px;
+  padding: 1.25rem;
+  min-height: 130px;
+  line-height: 1.85;
+  font-size: 0.98rem;
+}
+
+.xray-pos {
+  background: var(--success-gem-bg);
+  color: #34D399;
+  border-bottom: 2px solid var(--success-gem);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-shadow: 0 0 10px var(--success-gem-glow);
+}
+
+.xray-neg {
+  background: var(--alert-burgundy-bg);
+  color: #FDA4AF;
+  border-bottom: 2px solid var(--alert-burgundy);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-shadow: 0 0 10px var(--alert-burgundy-glow);
+}
+
+/* Financial Terminal Tables */
+table.custom-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table.custom-table th {
+  background-color: var(--bg-surface-elevated) !important;
+  color: var(--accent-gold) !important;
+  font-family: 'Cinzel', serif !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.08em !important;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border-gold-subtle) !important;
+}
+
+table.custom-table td {
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.10);
+  color: var(--text-header);
+  font-family: 'Inter', sans-serif;
+}
+
+table.custom-table td:nth-child(n+3) {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+table.custom-table tr:hover td {
+  background-color: var(--bg-surface-elevated);
+}
+
+/* Filter Pills */
+.filter-pill {
+  font-family: 'JetBrains Mono', monospace;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--border-gold-subtle);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-pill.active {
+  background: var(--accent-gold);
+  color: #0A0A0A;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 10px var(--accent-gold-glow);
+}
